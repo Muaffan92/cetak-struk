@@ -17,7 +17,7 @@
         @media print {
             body * {
                 visibility: hidden;
-                font-size: 8px;
+                font-size: 10.5px;
             }
 
             #section-to-print,
@@ -220,7 +220,7 @@
                 <p class="display-6 mt-3 mb-3">
                     <strong>
                         <b class="header">TOKEN</b> :
-                        <?= $Transaksi['vsn'] ?>
+                        <?= $vsn[0] ?>
                     </strong>
                 </p>
                 <div class="row">

@@ -17,7 +17,7 @@
         @media print {
             body * {
                 visibility: hidden;
-                font-size: 10.5px;
+                font-size: 9px;
             }
 
             #section-to-print,

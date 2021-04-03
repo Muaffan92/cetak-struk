@@ -15,15 +15,26 @@
         }
 
         @media print {
-            @page {
-                margin: 0;
+            body * {
+                visibility: hidden;
+            }
+
+            #section-to-print,
+            #section-to-print * {
+                visibility: visible;
+            }
+
+            #section-to-print {
+                position: absolute;
+                left: 0;
+                top: 0;
             }
         }
     </style>
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" id="section-to-print">
         <?php
         foreach ($getTransaksi as $Transaksi) {
 

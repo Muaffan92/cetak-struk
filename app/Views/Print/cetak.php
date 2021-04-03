@@ -21,6 +21,7 @@
                 padding: 0;
                 font-size: 12pt;
                 overflow: hidden;
+                color: 000;
             }
 
             body * {

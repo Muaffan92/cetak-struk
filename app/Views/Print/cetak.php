@@ -58,7 +58,7 @@
         ?>
             <div class="row">
                 <div class="col-12">
-                    <h1 class="display-4 mx-auto header-center text-uppercase mt-5 mb-3">
+                    <h1 class="display-4 mtext-uppercase mt-5 mb-3" >
                         <b>
                             <strong><?= $Transaksi['operator'] ?></strong>
                         </b>

@@ -29,6 +29,10 @@
                 left: 0;
                 top: 0;
             }
+
+            .header {
+                font-weight: bold;
+            }
         }
     </style>
 </head>
@@ -50,7 +54,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Tanggal</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col"><?= $Transaksi['tgl_sukses'] ?></div>
                     </div>
@@ -59,7 +63,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">Rp. <?= number_format(2000, 2, '.', ',') ?></div>
                     </div>
@@ -68,7 +72,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Tujuan</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col"><?= $Transaksi['tujuan'] ?></div>
                     </div>
@@ -77,7 +81,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Serial Number</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col"><?= $Transaksi['reff'] ?></div>
                     </div>
@@ -86,7 +90,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3 ">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Nama</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Nama</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">
                             <?php
@@ -103,7 +107,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">PPN</div>
+                        <div class="col-12 col-lg-4 fw-bold header">PPN</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">
                             <?php
@@ -120,7 +124,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Tarif</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Tarif</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">
                             <?php
@@ -137,7 +141,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">PPJ</div>
+                        <div class="col-12 col-lg-4 fw-bold header">PPJ</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">
                             <?php
@@ -155,7 +159,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Daya</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Daya</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">
                             <?php
@@ -172,7 +176,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Jumlah KWH</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Jumlah KWH</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">
                             <?php
@@ -189,7 +193,7 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Bayar</div>
+                        <div class="col-12 col-lg-4 fw-bold header">Bayar</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
                         <div class="col">Rp. <?= number_format($Transaksi['price'] + 2000, 2, '.', ',') ?></div>
                     </div>
@@ -198,7 +202,7 @@
             <div class="col">
                 <p class="display-6 mt-3 mb-3">
                     <strong>
-                        <b>TOKEN</b> :
+                        <b class="header">TOKEN</b> :
                         <?= $Transaksi['vsn'] ?>
                     </strong>
                 </p>

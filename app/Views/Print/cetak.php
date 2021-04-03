@@ -95,7 +95,7 @@
                 </div>
             </div>
 
-            <div class="d-block-sm header">
+            <div class="d-lg-none d-block header">
                 <b>================================</b>
             </div>
 
@@ -212,7 +212,7 @@
                 </div>
             </div>
 
-            <div class="d-block-sm header">
+            <div class="d-lg-none d-block header">
                 <b>================================</b>
             </div>
 

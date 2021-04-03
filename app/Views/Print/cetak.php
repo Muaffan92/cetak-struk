@@ -15,9 +15,16 @@
         }
 
         @media print {
+            @page {
+                size: A4;
+                margin: 0;
+                padding: 0;
+                font-size: 9.5pt;
+                overflow: hidden;
+            }
+            
             body * {
                 visibility: hidden;
-                font-size: 9px;
             }
 
             #section-to-print,

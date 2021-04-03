@@ -17,6 +17,7 @@
         @media print {
             body * {
                 visibility: hidden;
+                font-size: 8px;
             }
 
             #section-to-print,
@@ -28,7 +29,6 @@
                 position: absolute;
                 left: 0;
                 top: 0;
-                padding: 10%;
             }
 
             .header {
@@ -49,11 +49,15 @@
 
             $vsn = explode('/', $Transaksi['vsn']);
         ?>
-            <h1 class="display-4 text-center header-center text-uppercase mt-5 mb-3">
-                <b>
-                    <strong><?= $Transaksi['operator'] ?></strong>
-                </b>
-            </h1>
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="display-4 text-center header-center text-uppercase mt-5 mb-3">
+                        <b>
+                            <strong><?= $Transaksi['operator'] ?></strong>
+                        </b>
+                    </h1>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
@@ -219,7 +223,11 @@
                         <?= $Transaksi['vsn'] ?>
                     </strong>
                 </p>
-                <p class="text-center header-center">TERIMAH KASIH</p>
+                <div class="row">
+                    <div class="col-12">
+                        <p class="text-center header-center">TERIMAH KASIH</p>
+                    </div>
+                </div>
             </div>
         <?php
         }

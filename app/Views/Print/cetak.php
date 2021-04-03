@@ -57,8 +57,8 @@
             $vsn = explode('/', $Transaksi['vsn']);
         ?>
             <div class="row">
-                <div class="col-12">
-                    <h1 class="display-4 mtext-uppercase mt-5 mb-3" >
+                <div class="col align-self-center">
+                    <h1 class="display-4 text-uppercase mt-5 mb-3">
                         <b>
                             <strong><?= $Transaksi['operator'] ?></strong>
                         </b>
@@ -195,7 +195,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Jumlah KWH</div>
+                        <div class="col-3 col-lg-4 fw-bold header">KWH</div>
                         <div class="col-1 col-lg-1">:</div>
                         <div class="col">
                             <?php

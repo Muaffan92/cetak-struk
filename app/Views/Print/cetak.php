@@ -19,7 +19,7 @@
                 size: A4;
                 margin: 0;
                 padding: 0;
-                font-size: 9.5pt;
+                font-size: 12pt;
                 overflow: hidden;
             }
 
@@ -56,8 +56,8 @@
 
             $vsn = explode('/', $Transaksi['vsn']);
         ?>
-            <div class="row">
-                <div class="col align-self-center">
+            <div class="row d-flex justify-content-center">
+                <div class="col">
                     <h1 class="display-4 text-uppercase mt-5 mb-3">
                         <b>
                             <strong><?= $Transaksi['operator'] ?></strong>

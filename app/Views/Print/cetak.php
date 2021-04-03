@@ -22,7 +22,7 @@
                 font-size: 9.5pt;
                 overflow: hidden;
             }
-            
+
             body * {
                 visibility: hidden;
             }
@@ -58,7 +58,7 @@
         ?>
             <div class="row">
                 <div class="col-12">
-                    <h1 class="display-4 text-center header-center text-uppercase mt-5 mb-3">
+                    <h1 class="display-4 mx-auto header-center text-uppercase mt-5 mb-3">
                         <b>
                             <strong><?= $Transaksi['operator'] ?></strong>
                         </b>
@@ -232,7 +232,7 @@
                 </p>
                 <div class="row">
                     <div class="col-12">
-                        <p class="text-center header-center">TERIMAH KASIH</p>
+                        <p class="mx-auto header-center">TERIMAH KASIH</p>
                     </div>
                 </div>
             </div>

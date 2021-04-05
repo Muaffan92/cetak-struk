@@ -41,7 +41,11 @@ class Cetak extends BaseController
         }
 
         if (!empty($data)) {
-            echo view('Print/cetak', $data);
+            if (!empty($data['getTransaksi'])) {
+                echo view('Print/cetak', $data);
+            } else {
+                return redirect()->to(base_url('Home'));
+            }
         } else {
             return redirect()->to(base_url('Home'));
         }

@@ -14,6 +14,10 @@
             font-size: 12px;
         }
 
+        .col-3 {
+            width: 20%;
+        }
+
         @media print {
             @page {
                 size: A4;
@@ -315,10 +319,10 @@
 </body>
 
 <script type="text/javascript">
-    window.print();
-    window.onafterprint = function() {
-        history.go(-1);
-    };
+    // window.print();
+    // window.onafterprint = function() {
+    //     history.go(-1);
+    // };
 </script>
 
 <script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>

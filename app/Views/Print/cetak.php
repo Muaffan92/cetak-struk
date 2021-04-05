@@ -234,6 +234,21 @@
                     </div>
                 </div>
             <?php
+            } else {
+            ?>
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">Tagihan</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">Rp. <?= number_format($Transaksi['tagihan'], 2, '.', ','); ?></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                </div>
+            <?php
             }
             ?>
             <div class="row">
@@ -250,16 +265,22 @@
                 <b>================================</b>
             </div>
 
-            <div class="col">
-                <p class="display-6 mt-3 mb-3 text-dark">
-                    <strong>
-                        <b class="header">TOKEN</b>
-                        <div>
-                            <?= $vsn[0] ?>
-                        </div>
-                    </strong>
-                </p>
-            </div>
+            <?php
+            if ($Transaksi['operator'] != 'ppob') {
+            ?>
+                <div class="col">
+                    <p class="display-6 mt-3 mb-3 text-dark">
+                        <strong>
+                            <b class="header">TOKEN</b>
+                            <div>
+                                <?= $vsn[0] ?>
+                            </div>
+                        </strong>
+                    </p>
+                </div>
+            <?php
+            }
+            ?>
             <p>Terima Kasih</p>
         <?php
         }

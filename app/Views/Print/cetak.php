@@ -229,8 +229,10 @@
             <div class="col">
                 <p class="display-6 mt-3 mb-3 text-dark">
                     <strong>
-                        <b class="header">TOKEN</b> :
-                        <?= $vsn[0] ?>
+                        <b class="header">TOKEN</b>
+                        <div>
+                            <?= $vsn[0] ?>
+                        </div>
                     </strong>
                 </p>
                 <div class="row">

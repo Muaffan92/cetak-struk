@@ -17,7 +17,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 0;
+                margin: 15px;
                 padding: 0;
                 font-size: 12pt;
                 overflow: hidden;
@@ -58,7 +58,7 @@
             $vsn = explode('/', $Transaksi['vsn']);
         ?>
             <div class="row">
-                <div class="col-4"></div>
+                <div class="col-2"></div>
                 <div class="col-4">
                     <h1 class="display-4 text-uppercase mt-5 mb-3">
                         <b>
@@ -234,9 +234,10 @@
                     </strong>
                 </p>
                 <div class="row">
-                    <div class="col-12">
+                    <div class="col-4">
                         <p class="mx-auto header-center">TERIMAH KASIH</p>
                     </div>
+                    <div class="col-4"></div>
                 </div>
             </div>
         <?php

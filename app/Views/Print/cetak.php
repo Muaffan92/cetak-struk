@@ -157,15 +157,29 @@
                 ?>
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Bulan</div>
+                            <div class="col-3 col-lg-4 fw-bold header">Product</div>
                             <div class="col-1 col-lg-1">:</div>
-                            <div class="col text-dark">-</div>
+                            <div class="col text-dark"><?= $Transaksi['kode'] ?></div>
                         </div>
                     </div>
                 <?php
                 }
                 ?>
             </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="row">
+                        <div class="col-3 col-lg-4 fw-bold header">Bulan</div>
+                        <div class="col-1 col-lg-1">:</div>
+                        <div class="col text-dark">-</div>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"></div>
+                <div class="col-lg-3"></div>
+            </div>
+
             <?php
             if ($Transaksi['operator'] != 'ppob') {
             ?>

@@ -18,6 +18,7 @@
         <small class="text-muted">
             Catatan: Silahkan masukkan no tujuan Non PPOB / PPOB Anda berdasarkan tanggal transaksi.
         </small>
+        <?= session()->getFlashdata('message'); ?>
         <form action="<?= base_url('Cetak/') ?>" method="POST" class="row g-3 needs-validation mt-5" novalidate>
             <div class="col">
                 <label class="form-label">Layanan</label>

@@ -17,7 +17,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 15px;
+                margin: 15pt;
                 padding: 0;
                 font-size: 12pt;
                 overflow: hidden;
@@ -237,7 +237,7 @@
                     <div class="col-4">
                         <p class="mx-auto header-center">TERIMAH KASIH</p>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-2"></div>
                 </div>
             </div>
         <?php

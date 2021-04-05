@@ -61,9 +61,9 @@
                 $nama = $Transaksi['atas_nama'];
                 $bayar = $Transaksi['total_bayar'];
             } else {
-                $admin = 200;
+                $admin = 2000;
                 $nama = $vsn[1];
-                $bayar = $Transaksi['total_bayar'];
+                $bayar = $Transaksi['price']+2000;
             }
         ?>
             <h1 class="mt-5 mb-3">

@@ -58,15 +58,13 @@
             $vsn = explode('/', $Transaksi['vsn']);
         ?>
             <div class="row">
-                <div class="col-2"></div>
                 <div class="col-4">
                     <h1 class="display-4 text-uppercase mt-5 mb-3">
                         <b>
-                            <strong><?= $Transaksi['operator'] ?></strong>
+                            CETAK STRUK PEMBAYARAN
                         </b>
                     </h1>
                 </div>
-                <div class="col-4"></div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-3">
@@ -239,7 +237,6 @@
                     <div class="col-4">
                         <p class="mx-auto header-center">TERIMAH KASIH</p>
                     </div>
-                    <div class="col-2"></div>
                 </div>
             </div>
         <?php

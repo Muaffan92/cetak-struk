@@ -54,8 +54,17 @@
     <div class="container" id="section-to-print">
         <?php
         foreach ($getTransaksi as $Transaksi) {
-
             $vsn = explode('/', $Transaksi['vsn']);
+
+            if ($Transaksi['operator'] == 'ppob') {
+                $admin = $Transaksi['adm'];
+                $nama = $Transaksi['atas_nama'];
+                $bayar = $Transaksi['total_bayar'];
+            } else {
+                $admin = 200;
+                $nama = $vsn[1];
+                $bayar = $Transaksi['total_bayar'];
+            }
         ?>
             <h1 class="mt-5 mb-3">
                 <b>Cetak Struk Pembayaran</b>
@@ -74,7 +83,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold header">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark">Rp. <?= number_format(2000, 2, '.', ',') ?></div>
+                        <div class="col text-dark">Rp. <?= number_format($admin, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
@@ -108,8 +117,8 @@
                         <div class="col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($vsn[1])) {
-                                echo $vsn[1];
+                            if (!empty($nama)) {
+                                echo $nama;
                             } else {
                                 echo '-';
                             }
@@ -119,97 +128,120 @@
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPN</div>
-                        <div class="col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
-                            <?php
-                            if (!empty($vsn[5])) {
-                                echo $vsn[5];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
+                <?php
+                if ($Transaksi['operator'] != 'ppob') {
+                ?>
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">PPN</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">
+                                <?php
+                                if (!empty($vsn[5])) {
+                                    echo $vsn[5];
+                                } else {
+                                    echo '0';
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php
+                } else {
+                ?>
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">Bulan</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">-</div>
+                        </div>
+                    </div>
+                <?php
+                }
+                ?>
             </div>
-            <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Tarif</div>
-                        <div class="col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
-                            <?php
-                            if (!empty($vsn[2])) {
-                                echo $vsn[2];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
+            <?php
+            if ($Transaksi['operator'] != 'ppob') {
+            ?>
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">Tarif</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">
+                                <?php
+                                if (!empty($vsn[2])) {
+                                    echo $vsn[2];
+                                } else {
+                                    echo '0';
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">PPJ</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">
+                                <?php
+                                if (!empty($vsn[6])) {
+                                    $ppj = explode("#", $vsn[6]);
+                                    echo $ppj[0];
+                                } else {
+                                    echo '0';
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPJ</div>
-                        <div class="col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
-                            <?php
-                            if (!empty($vsn[6])) {
-                                $ppj = explode("#", $vsn[6]);
-                                echo $ppj[0];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
+
+                <div class="row">
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">Daya</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">
+                                <?php
+                                if (!empty($vsn[3])) {
+                                    echo $vsn[3];
+                                } else {
+                                    echo '0';
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-12 col-lg-3">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">KWH</div>
+                            <div class="col-1 col-lg-1">:</div>
+                            <div class="col text-dark">
+                                <?php
+                                if (!empty($vsn[4])) {
+                                    echo $vsn[4];
+                                } else {
+                                    echo '0';
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Daya</div>
-                        <div class="col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
-                            <?php
-                            if (!empty($vsn[3])) {
-                                echo $vsn[3];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">KWH</div>
-                        <div class="col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
-                            <?php
-                            if (!empty($vsn[4])) {
-                                echo $vsn[4];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <?php
+            }
+            ?>
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold header">Bayar</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark">Rp. <?= number_format($Transaksi['price'] + 2000, 2, '.', ',') ?></div>
+                        <div class="col text-dark">Rp. <?= number_format($bayar, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>

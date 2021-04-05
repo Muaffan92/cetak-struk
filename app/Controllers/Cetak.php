@@ -40,6 +40,10 @@ class Cetak extends BaseController
             }
         }
 
-        echo view('Print/cetak', $data);
+        if (!empty($data)) {
+            echo view('Print/cetak', $data);
+        } else {
+            return redirect()->to(base_url('Home'));
+        }
     }
 }

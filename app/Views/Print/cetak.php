@@ -17,7 +17,7 @@
         @media print {
             @page {
                 size: A4;
-                margin: 15pt;
+                margin: 10pt;
                 padding: 0;
                 font-size: 12pt;
                 overflow: hidden;

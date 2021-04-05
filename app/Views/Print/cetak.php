@@ -58,11 +58,11 @@
 
             if ($Transaksi['operator'] == 'ppob') {
                 $admin = $Transaksi['adm'];
-                $nama = $Transaksi['atas_nama'];
+                $nama  = $Transaksi['atas_nama'];
                 $bayar = $Transaksi['total_bayar'];
             } else {
                 $admin = 2000;
-                $nama = $vsn[1];
+                $nama  = $vsn[1];
                 $bayar = $Transaksi['price']+2000;
             }
         ?>

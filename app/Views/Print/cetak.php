@@ -19,7 +19,7 @@
                 size: A4;
                 margin: 10pt;
                 padding: 0;
-                font-size: 12pt;
+                font-size: 11pt;
                 overflow: hidden;
                 color: 000;
             }
@@ -57,15 +57,9 @@
 
             $vsn = explode('/', $Transaksi['vsn']);
         ?>
-            <div class="row">
-                <div class="col-4">
-                    <h1 class="display-4 text-uppercase mt-5 mb-3">
-                        <b>
-                            CETAK STRUK PEMBAYARAN
-                        </b>
-                    </h1>
-                </div>
-            </div>
+            <h1 class="display-4 text-uppercase mt-5 mb-3">
+                <b>Cetak Struk Pembayaran</b>
+            </h1>
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
@@ -233,11 +227,7 @@
                         </div>
                     </strong>
                 </p>
-                <div class="row">
-                    <div class="col-4">
-                        <p class="mx-auto header-center">TERIMAH KASIH</p>
-                    </div>
-                </div>
+                <p class="mx-auto header-center">TERIMAH KASIH</p>
             </div>
         <?php
         }

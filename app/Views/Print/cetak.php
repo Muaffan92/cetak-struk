@@ -227,8 +227,8 @@
                         </div>
                     </strong>
                 </p>
-                <p class="mx-auto header-center">TERIMAH KASIH</p>
             </div>
+            <p class="mx-auto header-center">Terima Kasih</p>
         <?php
         }
         ?>

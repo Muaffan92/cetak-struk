@@ -26,6 +26,7 @@
                 font-size: 11pt;
                 overflow: hidden;
                 color: 000;
+                font-weight: bold;
             }
 
             body * {

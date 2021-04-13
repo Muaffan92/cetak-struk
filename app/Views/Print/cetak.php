@@ -12,6 +12,7 @@
     <style>
         * {
             font-size: 12px;
+            font-weight: bold;
         }
 
         .col-3 {

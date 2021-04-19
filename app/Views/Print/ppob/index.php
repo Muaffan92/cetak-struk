@@ -60,17 +60,7 @@
     <div class="container" id="section-to-print">
         <?php
         foreach ($getTransaksi as $Transaksi) {
-            $vsn = explode('/', $Transaksi['vsn']);
-
-            if ($Transaksi['operator'] == 'ppob') {
-                $admin = $Transaksi['adm'];
-                $nama  = $Transaksi['atas_nama'];
-                $bayar = $Transaksi['total_bayar'];
-            } else {
-                $admin = 2000;
-                $nama  = $vsn[1];
-                $bayar = $Transaksi['price'] + 2000;
-            }
+            $vsn = explode('#', $Transaksi['vsn']);
         ?>
             <h1 class="mt-5 mb-3">
                 <b>Cetak Struk Pembayaran</b>
@@ -89,7 +79,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold header">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
+                        <div class="col text-dark">Rp.<?= number_format($Transaksi['adm'], 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
@@ -123,8 +113,8 @@
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($nama)) {
-                                echo $nama;
+                            if (!empty($Transaksi['atas_nama'])) {
+                                echo $Transaksi['atas_nama'];
                             } else {
                                 echo '-';
                             }
@@ -140,11 +130,9 @@
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($vsn[5])) {
-                                echo $vsn[5];
-                            } else {
-                                echo '0';
-                            }
+                            $ppn = explode(':', $vsn[5]);
+
+                            echo $ppn[1];
                             ?>
                         </div>
                     </div>
@@ -172,11 +160,9 @@
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($vsn[2])) {
-                                echo $vsn[2];
-                            } else {
-                                echo '0';
-                            }
+                            $tarif = explode('/', $vsn[0]);
+
+                            echo $tarif[0];
                             ?>
                         </div>
                     </div>
@@ -185,16 +171,13 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPJ</div>
+                        <div class="col-3 col-lg-4 fw-bold header">Denda</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($vsn[6])) {
-                                $ppj = explode("#", $vsn[6]);
-                                echo $ppj[0];
-                            } else {
-                                echo '0';
-                            }
+                            $denda = explode(':', $vsn[6]);
+
+                            echo $denda[1];
                             ?>
                         </div>
                     </div>
@@ -208,11 +191,9 @@
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($vsn[3])) {
-                                echo $vsn[3];
-                            } else {
-                                echo '0';
-                            }
+                            $daya = explode('/', $vsn[0]);
+
+                            echo $daya[1];
                             ?>
                         </div>
                     </div>
@@ -225,11 +206,9 @@
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
-                            if (!empty($vsn[4])) {
-                                echo $vsn[4];
-                            } else {
-                                echo '0';
-                            }
+                            $kwh = explode(':', $vsn[4]);
+
+                            echo $kwh[1];
                             ?>
                         </div>
                     </div>
@@ -241,7 +220,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold header">Bayar</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
+                        <div class="col text-dark">Rp.<?= number_format($Transaksi['total_bayar'], 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>

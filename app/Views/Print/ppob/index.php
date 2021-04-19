@@ -215,7 +215,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold header">Tagihan</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">Rp. <?= number_format($Transaksi['tagihan'],2) ?></div>
+                        <div class="col text-dark">Rp.<?= number_format($Transaksi['tagihan'],2) ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>

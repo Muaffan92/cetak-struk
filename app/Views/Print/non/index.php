@@ -257,10 +257,9 @@
 <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
 <script type="text/javascript">
-    window.print();
-    window.onafterprint = function() {
-        history.go(-1);
-    };
+    $(document).ready(function() {
+        window.print();
+    });
 </script>
 
 </html>

@@ -253,6 +253,9 @@
     </div>
 </body>
 
+<script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>
+<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
         window.print();
@@ -261,8 +264,5 @@
         };
     });
 </script>
-
-<script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>
-<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
 </html>

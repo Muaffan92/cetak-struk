@@ -222,7 +222,7 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Admin Bank</div>
+                        <div class="col-3 col-lg-4 fw-bold header">Admin</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">Rp.<?= number_format($Transaksi['adm'], 2) ?></div>
                     </div>
@@ -249,6 +249,9 @@
     </div>
 </body>
 
+<script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>
+<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+
 <script type="text/javascript">
     $(document).ready(function() {
         window.print();
@@ -257,8 +260,5 @@
         };
     });
 </script>
-
-<script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>
-<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
 </html>

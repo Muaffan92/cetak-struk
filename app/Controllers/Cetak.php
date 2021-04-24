@@ -42,7 +42,7 @@ class Cetak extends BaseController
 
         if (!empty($data)) {
             if (!empty($data['getTransaksi'])) {
-                echo view('Print/' . $this->request->getPost('layanan') . '/index', $data);
+                echo view('Print/' . $this->request->getPost('layanan') . '/'. $this->request->getPost('layanan'), $data);
             } else {
                 session()->setFlashdata('message', '<div class="alert alert-danger mt-3" role="alert">
                                                         <strong><b>WARNING</b></strong> | Data tidak di temukan

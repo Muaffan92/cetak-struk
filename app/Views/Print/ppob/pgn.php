@@ -60,7 +60,7 @@
     <div class="container" id="section-to-print">
         <?php
         foreach ($getTransaksi as $Transaksi) {
-            if (($Transaksi['kode'] == 'bpjs') && ($Transaksi['kode_sup'] == 'vsi')) {
+            if (($Transaksi['kode'] == 'pgn') && ($Transaksi['kode_sup'] == 'vsi')) {
                 $vsn = explode('#', $Transaksi['vsn']);
         ?>
                 <h1 class="mt-5 mb-3">
@@ -132,14 +132,14 @@
                 <div class="row">
                     <div class="col-12 col-lg-3 ">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Member</div>
+                            <div class="col-3 col-lg-4 fw-bold header">Meter</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">
                                 <?php
-                                if (!empty($vsn[4])) {
-                                    $member = explode(':', $vsn[4]);
+                                if (!empty($vsn[1])) {
+                                    $meter = explode(':', $vsn[1]);
 
-                                    echo $member[1];
+                                    echo $meter[1];
                                 } else {
                                     echo '-';
                                 }
@@ -149,7 +149,23 @@
                     </div>
                     <div class="col-lg-3"></div>
                     <div class="col-lg-3"></div>
-                    <div class="col-lg-3"></div>
+                    <div class="col-12 col-lg-3 ">
+                        <div class="row">
+                            <div class="col-3 col-lg-4 fw-bold header">Vol</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
+                            <div class="col text-dark">
+                                <?php
+                                if (!empty($vsn[2])) {
+                                    $vol = explode(':', $vsn[2]);
+
+                                    echo $vol[1];
+                                } else {
+                                    echo '-';
+                                }
+                                ?>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="row">

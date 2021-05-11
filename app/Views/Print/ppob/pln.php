@@ -64,7 +64,7 @@
                 $vsn = explode('#', $Transaksi['vsn']);
         ?>
                 <h1 class="mt-5 mb-3">
-                    <b>Cetak Struk Pembayaran</b>
+                    <b>Cetak Struk Pembayaran <?= $Transaksi['kode'] ?></b>
                 </h1>
                 <div class="row">
                     <div class="col-12 col-lg-3">

@@ -18,41 +18,6 @@
         .col-3 {
             width: 20%;
         }
-
-        @media print {
-            @page {
-                size: A4;
-                margin: 10pt;
-                padding: 0;
-                font-size: 11pt;
-                overflow: hidden;
-                color: 000;
-                font-weight: bold;
-            }
-
-            body * {
-                visibility: hidden;
-            }
-
-            #section-to-print,
-            #section-to-print * {
-                visibility: visible;
-            }
-
-            #section-to-print {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-
-            .header {
-                font-weight: bold;
-            }
-
-            .header-center {
-                text-align: center;
-            }
-        }
     </style>
 </head>
 

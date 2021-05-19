@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" media="print" href="<?= base_url('css/style.css') ?>">
-    <link rel="stylesheet" media="print" href="<?= base_url('bootstrap/css/bootstrap.min.css'); ?>">
+    <!-- <link rel="stylesheet" href="<?= base_url('bootstrap/css/bootstrap.min.css'); ?>"> -->
     <title>Cetak Struk</title>
 
     <style media="print">
@@ -219,7 +219,7 @@
 </body>
 
 <script src=" <?= base_url('js/jquery-3.5.1.js'); ?>"></script>
-<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<!-- <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script> -->
 
 <script type="text/javascript">
     $(document).ready(function() {

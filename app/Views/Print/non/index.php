@@ -18,31 +18,6 @@
         .col-3 {
             width: 20%;
         }
-
-        @media print {
-            @page {
-                size: auto;
-                margin: 0;
-                padding: 0;
-                overflow: hidden;
-                color: 000;
-            }
-
-            body * {
-                visibility: hidden;
-            }
-
-            #section-to-print,
-            #section-to-print * {
-                visibility: visible;
-            }
-
-            #section-to-print {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-        }
     </style>
 </head>
 
@@ -244,12 +219,12 @@
 </body>
 
 <script src=" <?= base_url('js/jquery-3.5.1.js'); ?>"></script>
-<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+                            <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        window.print();
-    });
-</script>
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    window.print();
+                                });
+                            </script>
 
 </html>

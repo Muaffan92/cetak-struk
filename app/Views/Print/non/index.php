@@ -40,7 +40,7 @@
             <div class="d-lg-none d-block fw-bold">
                 <b>-----------------------------------</b>
             </div>
-            <h1 class="mt-5 mb-3">
+            <h1 class="mt-5 mb-3 text-center">
                 <b>Cetak Struk Pembayaran</b>
             </h1>
             <div class="d-lg-none text-center fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
@@ -61,7 +61,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
+                        <div class="col fw-normal">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col"><?= $Transaksi['tujuan'] ?></div>
+                        <div class="col fw-normal"><?= $Transaksi['tujuan'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
@@ -79,7 +79,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col"><?= $Transaksi['reff'] ?></div>
+                        <div class="col fw-normal"><?= $Transaksi['reff'] ?></div>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Nama</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($nama)) {
                                 echo $nama;
@@ -110,7 +110,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">PPN</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[5])) {
                                 echo $vsn[5];
@@ -128,7 +128,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Tarif</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[2])) {
                                 echo $vsn[2];
@@ -145,7 +145,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">PPJ</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[6])) {
                                 $ppj = explode("#", $vsn[6]);
@@ -164,7 +164,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Daya</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[3])) {
                                 echo $vsn[3];
@@ -181,7 +181,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">KWH</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[4])) {
                                 echo $vsn[4];
@@ -199,7 +199,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Bayar</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
+                        <div class="col fw-normal">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>

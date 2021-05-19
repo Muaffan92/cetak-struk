@@ -36,7 +36,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col"><?= $Transaksi['tgl_sukses'] ?></div>
+                            <div class="col fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
@@ -45,7 +45,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col"><?= $Transaksi['tujuan'] ?></div>
+                            <div class="col fw-normal"><?= $Transaksi['tujuan'] ?></div>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col"><?= $Transaksi['reff'] ?></div>
+                            <div class="col fw-normal"><?= $Transaksi['reff'] ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
@@ -72,7 +72,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Nama</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col">
+                            <div class="col fw-normal">
                                 <?php
                                 if (!empty($Transaksi['atas_nama'])) {
                                     echo $Transaksi['atas_nama'];
@@ -89,7 +89,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Bulan</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col"><?= $Transaksi['bulan_ppob'] ?></div>
+                            <div class="col fw-normal"><?= $Transaksi['bulan_ppob'] ?></div>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Meter</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col">
+                            <div class="col fw-normal">
                                 <?php
                                 if (!empty($vsn[1])) {
                                     $meter = explode(':', $vsn[1]);
@@ -118,7 +118,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Vol</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col">
+                            <div class="col fw-normal">
                                 <?php
                                 if (!empty($vsn[2])) {
                                     $vol = explode(':', $vsn[2]);
@@ -138,7 +138,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Tagihan</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col">Rp.<?= number_format($Transaksi['tagihan'], 2) ?></div>
+                            <div class="col fw-normal">Rp.<?= number_format($Transaksi['tagihan'], 2) ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
@@ -147,7 +147,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Admin</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col">Rp.<?= number_format($Transaksi['adm'], 2) ?></div>
+                            <div class="col fw-normal">Rp.<?= number_format($Transaksi['adm'], 2) ?></div>
                         </div>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold">Bayar</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col">Rp.<?= number_format($Transaksi['total_bayar'], 2) ?></div>
+                            <div class="col fw-normal">Rp.<?= number_format($Transaksi['total_bayar'], 2) ?></div>
                         </div>
                     </div>
                 </div>

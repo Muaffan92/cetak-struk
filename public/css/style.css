@@ -4,7 +4,7 @@
 }
 
 @media print {
-  body {
+  * {
     font-family: 'Courier New', Courier, monospace;
     box-shadow: 0;
     font-weight: lighter;

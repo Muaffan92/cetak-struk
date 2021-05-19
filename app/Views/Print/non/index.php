@@ -37,11 +37,18 @@
                 $bayar = $Transaksi['price'] + 2000;
             }
         ?>
+            <div class="d-lg-none d-block fw-bold">
+                <b>-----------------------------------</b>
+            </div>
             <h1 class="mt-5 mb-3">
                 <b>Cetak Struk Pembayaran</b>
             </h1>
+            <div class="d-lg-none text-center fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
+            <div class="d-lg-none d-block fw-bold">
+                <b>-----------------------------------</b>
+            </div>
             <div class="row">
-                <div class="col-12 col-lg-3">
+                <div class="col-12 d-lg-block d-none col-lg-3">
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
@@ -202,14 +209,20 @@
             </div>
 
             <div class="col">
+                <div class="d-lg-none d-block fw-bold">
+                    <b>-----------------------------------</b>
+                </div>
                 <p class="display-6 mt-3 mb-3">
                 <div>
-                    <b>TOKEN</b>
+                    <b class="d-lg-block d-none">TOKEN</b>
                     <div>
                         <?= $vsn[0] ?>
                     </div>
                 </div>
                 </p>
+                <div class="d-lg-none d-block fw-bold">
+                    <b>-----------------------------------</b>
+                </div>
             </div>
             <p>Terima Kasih</p>
         <?php

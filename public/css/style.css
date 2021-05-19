@@ -5,7 +5,7 @@
 
 @media print {
   body {
-    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
     box-shadow: 0;
     font-weight: lighter;
     color: #6c757d!important;

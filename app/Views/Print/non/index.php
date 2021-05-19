@@ -203,12 +203,12 @@
 
             <div class="col">
                 <p class="display-6 mt-3 mb-3">
-                    <strong>
-                        <b>TOKEN</b>
-                        <div>
-                            <?= $vsn[0] ?>
-                        </div>
-                    </strong>
+                <div>
+                    <b>TOKEN</b>
+                    <div>
+                        <?= $vsn[0] ?>
+                    </div>
+                </div>
                 </p>
             </div>
             <p>Terima Kasih</p>
@@ -219,12 +219,12 @@
 </body>
 
 <script src=" <?= base_url('js/jquery-3.5.1.js'); ?>"></script>
-                            <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
-                            <script type="text/javascript">
-                                $(document).ready(function() {
-                                    window.print();
-                                });
-                            </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        window.print();
+    });
+</script>
 
 </html>

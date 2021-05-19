@@ -45,7 +45,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col"><?= $Transaksi['tgl_sukses'] ?></div>
+                        <div class="col fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>

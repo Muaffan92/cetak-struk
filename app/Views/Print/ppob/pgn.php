@@ -11,7 +11,7 @@
 
     <style>
         * {
-            font-size: 12px;
+            font-size: 9px;
             font-weight: bold;
         }
 

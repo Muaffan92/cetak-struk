@@ -43,50 +43,50 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Tanggal</div>
+                        <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark"><?= $Transaksi['tgl_sukses'] ?></div>
+                        <div class="col"><?= $Transaksi['tgl_sukses'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Admin Bank</div>
+                        <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
+                        <div class="col">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Tujuan</div>
+                        <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark"><?= $Transaksi['tujuan'] ?></div>
+                        <div class="col"><?= $Transaksi['tujuan'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Serial Number</div>
+                        <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark"><?= $Transaksi['reff'] ?></div>
+                        <div class="col"><?= $Transaksi['reff'] ?></div>
                     </div>
                 </div>
             </div>
 
-            <div class="d-lg-none d-block header">
+            <div class="d-lg-none d-block fw-bold">
                 <b>================================</b>
             </div>
 
             <div class="row">
                 <div class="col-12 col-lg-3 ">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Nama</div>
+                        <div class="col-3 col-lg-4 fw-bold">Nama</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col">
                             <?php
                             if (!empty($nama)) {
                                 echo $nama;
@@ -101,9 +101,9 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPN</div>
+                        <div class="col-3 col-lg-4 fw-bold">PPN</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col">
                             <?php
                             if (!empty($vsn[5])) {
                                 echo $vsn[5];
@@ -119,9 +119,9 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Tarif</div>
+                        <div class="col-3 col-lg-4 fw-bold">Tarif</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col">
                             <?php
                             if (!empty($vsn[2])) {
                                 echo $vsn[2];
@@ -136,9 +136,9 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPJ</div>
+                        <div class="col-3 col-lg-4 fw-bold">PPJ</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col">
                             <?php
                             if (!empty($vsn[6])) {
                                 $ppj = explode("#", $vsn[6]);
@@ -155,9 +155,9 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Daya</div>
+                        <div class="col-3 col-lg-4 fw-bold">Daya</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col">
                             <?php
                             if (!empty($vsn[3])) {
                                 echo $vsn[3];
@@ -172,9 +172,9 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">KWH</div>
+                        <div class="col-3 col-lg-4 fw-bold">KWH</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col">
                             <?php
                             if (!empty($vsn[4])) {
                                 echo $vsn[4];
@@ -190,21 +190,21 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Bayar</div>
+                        <div class="col-3 col-lg-4 fw-bold">Bayar</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
+                        <div class="col">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
 
-            <div class="d-lg-none d-block header">
+            <div class="d-lg-none d-block fw-bold">
                 <b>================================</b>
             </div>
 
             <div class="col">
-                <p class="display-6 mt-3 mb-3 text-dark">
+                <p class="display-6 mt-3 mb-3">
                     <strong>
-                        <b class="header">TOKEN</b>
+                        <b>TOKEN</b>
                         <div>
                             <?= $vsn[0] ?>
                         </div>
@@ -218,13 +218,13 @@
     </div>
 </body>
 
-<script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>
-<script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
+<script src=" <?= base_url('js/jquery-3.5.1.js'); ?>"></script>
+                            <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        window.print();
-    });
-</script>
+                            <script type="text/javascript">
+                                $(document).ready(function() {
+                                    window.print();
+                                });
+                            </script>
 
 </html>

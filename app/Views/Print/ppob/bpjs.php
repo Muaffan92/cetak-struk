@@ -34,18 +34,18 @@
                 <div class="row">
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-12 col-lg-4 fw-bold header">Tanggal</div>
+                            <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col text-dark"><?= $Transaksi['tgl_sukses'] ?></div>
+                            <div class="col"><?= $Transaksi['tgl_sukses'] ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
                     <div class="col-lg-3"></div>
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-12 col-lg-4 fw-bold header">Tujuan</div>
+                            <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col text-dark"><?= $Transaksi['tujuan'] ?></div>
+                            <div class="col"><?= $Transaksi['tujuan'] ?></div>
                         </div>
                     </div>
                 </div>
@@ -53,9 +53,9 @@
                 <div class="row">
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-12 col-lg-4 fw-bold header">Serial Number</div>
+                            <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col text-dark"><?= $Transaksi['reff'] ?></div>
+                            <div class="col"><?= $Transaksi['reff'] ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
@@ -63,16 +63,16 @@
                     <div class="col-lg-3"></div>
                 </div>
 
-                <div class="d-lg-none d-block header">
+                <div class="d-lg-none d-block fw-bold">
                     <b>================================</b>
                 </div>
 
                 <div class="row">
                     <div class="col-12 col-lg-3 ">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Nama</div>
+                            <div class="col-3 col-lg-4 fw-bold">Nama</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col text-dark">
+                            <div class="col">
                                 <?php
                                 if (!empty($Transaksi['atas_nama'])) {
                                     echo $Transaksi['atas_nama'];
@@ -87,9 +87,9 @@
                     <div class="col-lg-3"></div>
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Bulan</div>
+                            <div class="col-3 col-lg-4 fw-bold">Bulan</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col text-dark"><?= $Transaksi['bulan_ppob'] ?></div>
+                            <div class="col"><?= $Transaksi['bulan_ppob'] ?></div>
                         </div>
                     </div>
                 </div>
@@ -97,9 +97,9 @@
                 <div class="row">
                     <div class="col-12 col-lg-3 ">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Member</div>
+                            <div class="col-3 col-lg-4 fw-bold">Member</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col text-dark">
+                            <div class="col">
                                 <?php
                                 if (!empty($vsn[4])) {
                                     $member = explode(':', $vsn[4]);
@@ -120,18 +120,18 @@
                 <div class="row">
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Tagihan</div>
+                            <div class="col-3 col-lg-4 fw-bold">Tagihan</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col text-dark">Rp.<?= number_format($Transaksi['tagihan'], 2) ?></div>
+                            <div class="col">Rp.<?= number_format($Transaksi['tagihan'], 2) ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>
                     <div class="col-lg-3"></div>
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Admin</div>
+                            <div class="col-3 col-lg-4 fw-bold">Admin</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col text-dark">Rp.<?= number_format($Transaksi['adm'], 2) ?></div>
+                            <div class="col">Rp.<?= number_format($Transaksi['adm'], 2) ?></div>
                         </div>
                     </div>
                 </div>
@@ -139,14 +139,14 @@
                 <div class="row">
                     <div class="col-12 col-lg-3">
                         <div class="row">
-                            <div class="col-3 col-lg-4 fw-bold header">Bayar</div>
+                            <div class="col-3 col-lg-4 fw-bold">Bayar</div>
                             <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                            <div class="col text-dark">Rp.<?= number_format($Transaksi['total_bayar'], 2) ?></div>
+                            <div class="col">Rp.<?= number_format($Transaksi['total_bayar'], 2) ?></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="d-lg-none d-block header">
+                <div class="d-lg-none d-block fw-bold">
                     <b>================================</b>
                 </div>
                 <p>Terima Kasih</p>

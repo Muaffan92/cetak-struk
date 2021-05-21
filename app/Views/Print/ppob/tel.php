@@ -25,7 +25,7 @@
     <div class="container" id="section-to-print">
         <?php
         foreach ($getTransaksi as $Transaksi) {
-            if (($Transaksi['kode'] == 'halo')) {
+            if (($Transaksi['kode'] == 'tel')) {
         ?>
                 <h1 class="mt-5 mb-3">
                     <b>Cetak Struk Pembayaran <?= $Transaksi['kode'] ?></b>

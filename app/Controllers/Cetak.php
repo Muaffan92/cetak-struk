@@ -52,7 +52,7 @@ class Cetak extends BaseController
                     }
 
                     // PENGECEKAN FILE TERSEDIA ATAU TIDAK
-                    if (($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'pln') || ($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'speedy') || ($getTransaksi['kode'] == 'pgn') || (preg_match('/pdam/i', $getTransaksi['kode']))) {
+                    if (($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'pln') || ($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'speedy') || ($getTransaksi['kode'] == 'pgn') || (preg_match('/pdam/i', $getTransaksi['kode'])) || ($getTransaksi['kode'] == 'tel') || ($getTransaksi['kode'] == 'halo')) {
                         if (preg_match('/pdam/i', $getTransaksi['kode'])) {
                             echo view('Print/' . $this->request->getPost('layanan') . '/pdam', $data);
                         } else {

@@ -52,7 +52,7 @@ class Cetak extends BaseController
                     }
 
                     // PENGECEKAN FILE TERSEDIA ATAU TIDAK
-                    if (($getTransaksi['kode'] != 'bpjs') && ($getTransaksi['kode'] != 'pln') && ($getTransaksi['kode'] != 'bpjs') && ($getTransaksi['kode'] != 'speedy') && ($getTransaksi['kode'] != 'pgn')) {
+                    if (($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'pln') || ($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'speedy') || ($getTransaksi['kode'] == 'pgn')) {
                         echo view('Print/' . $this->request->getPost('layanan') . '/' . $getTransaksi['kode'], $data);
                     } else {
                         session()->setFlashdata('message', '<div class="alert alert-danger mt-3" role="alert">

@@ -51,11 +51,19 @@ class Cetak extends BaseController
                         $getTransaksi = $this->TablesModels->getData('transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getRowArray();
                     }
 
-                    echo view('Print/' . $this->request->getPost('layanan') . '/' . $getTransaksi['kode'], $data);
+                    // PENGECEKAN FILE TERSEDIA ATAU TIDAK
+                    if (file_exists('Print/' . $this->request->getPost('layanan') . '/' . $getTransaksi['kode'])) {
+                        echo view('Print/' . $this->request->getPost('layanan') . '/' . $getTransaksi['kode'], $data);
+                    } else {
+                        session()->setFlashdata('message', '<div class="alert alert-danger mt-3" role="alert">
+                                                        <strong><b>WARNING</b></strong> | Struk Masih Belum di Buatkan.
+                                                    </div>');
+                        return redirect()->to(base_url('Home'));
+                    }
                 }
             } else {
                 session()->setFlashdata('message', '<div class="alert alert-danger mt-3" role="alert">
-                                                        <strong><b>WARNING</b></strong> | Data tidak di temukan
+                                                        <strong><b>WARNING</b></strong> | Data Tidak di Temukan
                                                     </div>');
                 return redirect()->to(base_url('Home'));
             }

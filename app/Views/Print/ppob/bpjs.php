@@ -25,7 +25,7 @@
     <div class="container" id="section-to-print">
         <?php
         foreach ($getTransaksi as $Transaksi) {
-            if (($Transaksi['kode'] == 'bpjs') && ($Transaksi['kode_sup'] == 'vsi')) {
+            if (($Transaksi['kode'] == 'bpjs')) {
                 $vsn = explode('#', $Transaksi['vsn']);
         ?>
                 <h1 class="mt-5 mb-3">

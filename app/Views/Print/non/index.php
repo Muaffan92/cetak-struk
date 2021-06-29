@@ -5,53 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?= base_url('css/style.css') ?>">
+    <link rel="stylesheet" media="print" href="<?= base_url('css/style.css') ?>">
     <link rel="stylesheet" href="<?= base_url('bootstrap/css/bootstrap.min.css'); ?>">
     <title>Cetak Struk</title>
 
-    <style>
+    <style media="print">
         * {
-            font-size: 12px;
+            font-size: 11px;
             font-weight: bold;
         }
 
         .col-3 {
             width: 20%;
-        }
-
-        @media print {
-            @page {
-                size: A4;
-                margin: 10pt;
-                padding: 0;
-                font-size: 11pt;
-                overflow: hidden;
-                color: 000;
-                font-weight: bold;
-            }
-
-            body * {
-                visibility: hidden;
-            }
-
-            #section-to-print,
-            #section-to-print * {
-                visibility: visible;
-            }
-
-            #section-to-print {
-                position: absolute;
-                left: 0;
-                top: 0;
-            }
-
-            .header {
-                font-weight: bold;
-            }
-
-            .header-center {
-                text-align: center;
-            }
         }
     </style>
 </head>
@@ -72,56 +37,65 @@
                 $bayar = $Transaksi['price'] + 2000;
             }
         ?>
-            <h1 class="mt-5 mb-3">
-                <b>Cetak Struk Pembayaran</b>
-            </h1>
+            <div class="text-warp">
+                <div class="d-lg-none d-block fw-bold">
+                    <b>-----------------------------------</b>
+                </div>
+                <h1>
+                    <b>Cetak Struk Pembayaran</b>
+                </h1>
+                <div class="d-lg-none fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
+                <div class="d-lg-none d-block fw-bold">
+                    <b>-----------------------------------</b>
+                </div>
+            </div>
             <div class="row">
-                <div class="col-12 col-lg-3">
+                <div class="col-12 d-lg-block d-none col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Tanggal</div>
+                        <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark"><?= $Transaksi['tgl_sukses'] ?></div>
+                        <div class="col fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Admin Bank</div>
+                        <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
+                        <div class="col fw-normal">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Tujuan</div>
+                        <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark"><?= $Transaksi['tujuan'] ?></div>
+                        <div class="col fw-normal"><?= $Transaksi['tujuan'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold header">Serial Number</div>
+                        <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col text-dark"><?= $Transaksi['reff'] ?></div>
+                        <div class="col fw-normal"><?= $Transaksi['reff'] ?></div>
                     </div>
                 </div>
             </div>
 
-            <div class="d-lg-none d-block header">
+            <div class="d-lg-none d-block fw-bold">
                 <b>================================</b>
             </div>
 
             <div class="row">
                 <div class="col-12 col-lg-3 ">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Nama</div>
+                        <div class="col-3 col-lg-4 fw-bold">Nama</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($nama)) {
                                 echo $nama;
@@ -136,9 +110,9 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPN</div>
+                        <div class="col-3 col-lg-4 fw-bold">PPN</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[5])) {
                                 echo $vsn[5];
@@ -154,9 +128,9 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Tarif</div>
+                        <div class="col-3 col-lg-4 fw-bold">Tarif</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[2])) {
                                 echo $vsn[2];
@@ -171,9 +145,9 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">PPJ</div>
+                        <div class="col-3 col-lg-4 fw-bold">PPJ</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[6])) {
                                 $ppj = explode("#", $vsn[6]);
@@ -190,9 +164,9 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Daya</div>
+                        <div class="col-3 col-lg-4 fw-bold">Daya</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[3])) {
                                 echo $vsn[3];
@@ -207,9 +181,9 @@
                 <div class="col-lg-3"></div>
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">KWH</div>
+                        <div class="col-3 col-lg-4 fw-bold">KWH</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">
+                        <div class="col fw-normal">
                             <?php
                             if (!empty($vsn[4])) {
                                 echo $vsn[4];
@@ -225,26 +199,32 @@
             <div class="row">
                 <div class="col-12 col-lg-3">
                     <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold header">Bayar</div>
+                        <div class="col-3 col-lg-4 fw-bold">Bayar</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col text-dark">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
+                        <div class="col fw-normal">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
                     </div>
                 </div>
             </div>
 
-            <div class="d-lg-none d-block header">
+            <div class="d-lg-none d-block fw-bold">
                 <b>================================</b>
             </div>
 
             <div class="col">
-                <p class="display-6 mt-3 mb-3 text-dark">
-                    <strong>
-                        <b class="header">TOKEN</b>
-                        <div>
-                            <?= $vsn[0] ?>
-                        </div>
-                    </strong>
+                <div class="d-lg-none d-block fw-bold">
+                    <b>-----------------------------------</b>
+                </div>
+                <p class="display-6 mt-3 mb-3">
+                <div>
+                    <b class="d-lg-block d-none">TOKEN</b>
+                    <div>
+                        <?= $vsn[0] ?>
+                    </div>
+                </div>
                 </p>
+                <div class="d-lg-none d-block fw-bold">
+                    <b>-----------------------------------</b>
+                </div>
             </div>
             <p>Terima Kasih</p>
         <?php
@@ -253,13 +233,11 @@
     </div>
 </body>
 
-<script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>
+<script src=" <?= base_url('js/jquery-3.5.1.js'); ?>"></script>
 <script src="<?= base_url('bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
 
 <script type="text/javascript">
-    $(document).ready(function() {
-        window.print();
-    });
+    window.print();
 </script>
 
 </html>

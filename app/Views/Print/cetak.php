@@ -67,7 +67,7 @@
             } else {
                 $admin = 2000;
                 $nama  = $vsn[1];
-                $bayar = $Transaksi['price']+2000;
+                $bayar = $Transaksi['price'] + 2000;
             }
         ?>
             <h1 class="mt-5 mb-3">
@@ -124,7 +124,7 @@
                 <div class="col-12 col-lg-3 ">
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold header">Nama</div>
-                        <div class="col-1 col-lg-1">:</div>
+                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">
                             <?php
                             if (!empty($nama)) {
@@ -144,7 +144,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">PPN</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">
                                 <?php
                                 if (!empty($vsn[5])) {
@@ -162,7 +162,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">Product</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark"><?= $Transaksi['kode'] ?></div>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold header">Bulan</div>
-                        <div class="col-1 col-lg-1">:</div>
+                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">-</div>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">Tarif</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">
                                 <?php
                                 if (!empty($vsn[2])) {
@@ -208,7 +208,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">PPJ</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">
                                 <?php
                                 if (!empty($vsn[6])) {
@@ -227,7 +227,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">Daya</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">
                                 <?php
                                 if (!empty($vsn[3])) {
@@ -244,7 +244,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">KWH</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">
                                 <?php
                                 if (!empty($vsn[4])) {
@@ -264,7 +264,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">Tagihan</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">Rp.<?= number_format($Transaksi['tagihan'], 2, '.', ','); ?></div>
                         </div>
                     </div>
@@ -273,7 +273,7 @@
                     <div class="col-12 col-lg-3">
                         <div class="row">
                             <div class="col-3 col-lg-4 fw-bold header">Admin</div>
-                            <div class="col-1 col-lg-1">:</div>
+                            <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                             <div class="col text-dark">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
                         </div>
                     </div>
@@ -285,7 +285,7 @@
                 <div class="col-12 col-lg-3">
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold header">Bayar</div>
-                        <div class="col-1 col-lg-1">:</div>
+                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
                         <div class="col text-dark">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
                     </div>
                 </div>
@@ -319,10 +319,10 @@
 </body>
 
 <script type="text/javascript">
-    // window.print();
-    // window.onafterprint = function() {
-    //     history.go(-1);
-    // };
+    window.print();
+    window.onafterprint = function() {
+        history.go(-1);
+    };
 </script>
 
 <script src="<?= base_url('js/jquery-3.5.1.js'); ?>"></script>

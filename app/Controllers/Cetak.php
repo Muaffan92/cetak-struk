@@ -25,7 +25,7 @@ class Cetak extends BaseController
                 ];
             } elseif ($this->request->getPost('layanan') == 'ppob') {
                 $data = [
-                    'getTransaksi' => $this->TablesModels->getData('data_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2' ,'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
+                    'getTransaksi' => $this->TablesModels->getData('data_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
                 ];
             }
         } else {
@@ -35,13 +35,20 @@ class Cetak extends BaseController
                 ];
             } elseif ($this->request->getPost('layanan') == 'ppob') {
                 $data = [
-                    'getTransaksi' => $this->TablesModels->getData('transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2' ,'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
+                    'getTransaksi' => $this->TablesModels->getData('transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
                 ];
             }
         }
 
         if (!empty($data)) {
-            echo view('Print/cetak', $data);
+            if (!empty($data['getTransaksi'])) {
+                echo view('Print/cetak', $data);
+            } else {
+                session()->setFlashdata('message', '<div class="alert alert-danger mt-3" role="alert">
+                                                        <strong><b>WARNING</b></strong> | Data tidak di temukan
+                                                    </div>');
+                return redirect()->to(base_url('Home'));
+            }
         } else {
             return redirect()->to(base_url('Home'));
         }

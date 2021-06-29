@@ -12,6 +12,7 @@
     <style>
         * {
             font-size: 12px;
+            font-weight: bold;
         }
 
         .col-3 {
@@ -26,6 +27,7 @@
                 font-size: 11pt;
                 overflow: hidden;
                 color: 000;
+                font-weight: bold;
             }
 
             body * {

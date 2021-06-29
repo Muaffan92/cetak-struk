@@ -32,12 +32,9 @@ class Database extends Config
 	 */
 	public $default = [
 		'DSN'      => '',
-		'hostname' => '192.168.0.208',
-		'username' => 'sandalnew',
-		'password' => 's3p4tub4u@2020',
-		// 'hostname' => 'localhost',
-		// 'username' => 'root',
-		// 'password' => '12345678',
+		'hostname' => '192.168.0.199',
+		'username' => 'easypublic',
+		'password' => 'g3mb3l@publ1c',
 		'database' => 'easypulsa',
 		'DBDriver' => 'MySQLi',
 		'DBPrefix' => '',

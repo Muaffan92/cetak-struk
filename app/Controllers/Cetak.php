@@ -17,6 +17,9 @@ class Cetak extends BaseController
 
     public function index()
     {
+        // KODE YANG SUDAH MEMILIKI STRUK
+        $struk = ['bpjs', 'pln', 'speedy', 'pgn', 'tel', 'halo', 'fif'];
+
         // PENGECEKAN TANGGAL SEKARANG
         if ($this->request->getPost('tanggal') != date('Y-m-d')) {
             if ($this->request->getPost('layanan') == 'non') {
@@ -52,7 +55,7 @@ class Cetak extends BaseController
                     }
 
                     // PENGECEKAN FILE TERSEDIA ATAU TIDAK
-                    if (($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'pln') || ($getTransaksi['kode'] == 'bpjs') || ($getTransaksi['kode'] == 'speedy') || ($getTransaksi['kode'] == 'pgn') || (preg_match('/pdam/i', $getTransaksi['kode'])) || ($getTransaksi['kode'] == 'tel') || ($getTransaksi['kode'] == 'halo')) {
+                    if ((in_array($getTransaksi['kode'], $struk)) || (preg_match('/pdam/i', $getTransaksi['kode']))) {
                         if (preg_match('/pdam/i', $getTransaksi['kode'])) {
                             echo view('Print/' . $this->request->getPost('layanan') . '/pdam', $data);
                         } else {

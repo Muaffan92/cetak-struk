@@ -21,7 +21,17 @@ class Cetak extends BaseController
         $struk = ['bpjs', 'pln', 'speedy', 'pgn', 'tel', 'halo', 'fif'];
 
         // PENGECEKAN TANGGAL SEKARANG
-        if ($this->request->getPost('tanggal') != date('Y-m-d')) {
+        if (($this->request->getPost('tanggal') != date('Y-m-d')) && ($this->request->getPost('tanggal') <= date('Y-m-d', strtotime('-1 month -1 day', strtotime(date('Y-m-d')))))) {
+            if ($this->request->getPost('layanan') == 'non') {
+                $data = [
+                    'getTransaksi' => $this->TablesModels->getData('backup_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator != ' => 'ppob', 'status' => '2'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
+                ];
+            } elseif ($this->request->getPost('layanan') == 'ppob') {
+                $data = [
+                    'getTransaksi' => $this->TablesModels->getData('backup_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
+                ];
+            }
+        } elseif (($this->request->getPost('tanggal') != date('Y-m-d')) && ($this->request->getPost('tanggal') > date('Y-m-d', strtotime('-1 month -1 day', strtotime(date('Y-m-d')))))) {
             if ($this->request->getPost('layanan') == 'non') {
                 $data = [
                     'getTransaksi' => $this->TablesModels->getData('data_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator != ' => 'ppob', 'status' => '2'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
@@ -31,7 +41,7 @@ class Cetak extends BaseController
                     'getTransaksi' => $this->TablesModels->getData('data_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
                 ];
             }
-        } else {
+        } elseif (($this->request->getPost('tanggal') == date('Y-m-d')) && ($this->request->getPost('tanggal') > date('Y-m-d', strtotime('-1 month -1 day', strtotime(date('Y-m-d')))))) {
             if ($this->request->getPost('layanan') == 'non') {
                 $data = [
                     'getTransaksi' => $this->TablesModels->getData('transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator != ' => 'ppob', 'status' => '2'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getResultArray()
@@ -48,7 +58,9 @@ class Cetak extends BaseController
                 if ($this->request->getPost('layanan') == 'non') {
                     echo view('Print/' . $this->request->getPost('layanan') . '/index', $data);
                 } elseif ($this->request->getPost('layanan') == 'ppob') {
-                    if ($this->request->getPost('tanggal') != date('Y-m-d')) {
+                    if (($this->request->getPost('tanggal') != date('Y-m-d')) && ($this->request->getPost('tanggal') <= date('Y-m-d', strtotime('-1 month -1 day', strtotime(date('Y-m-d')))))) {
+                        $getTransaksi = $this->TablesModels->getData('backup_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getRowArray();
+                    } elseif (($this->request->getPost('tanggal') != date('Y-m-d')) && ($this->request->getPost('tanggal') > date('Y-m-d', strtotime('-1 month -1 day', strtotime(date('Y-m-d')))))) {
                         $getTransaksi = $this->TablesModels->getData('data_transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getRowArray();
                     } else {
                         $getTransaksi = $this->TablesModels->getData('transaksi', '*', ['tujuan' => $this->request->getPost('tujuan'), 'operator' => 'ppob', 'status' => '2', 'status_ppob' => 'pay'], ['tgl_sukses' => $this->request->getPost('tanggal')])->getRowArray();

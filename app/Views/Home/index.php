@@ -20,7 +20,7 @@
         </small>
         <?= session()->getFlashdata('message'); ?>
         <form action="<?= base_url('Cetak/') ?>" method="POST" class="row g-3 needs-validation mt-5" novalidate>
-            <div class="col">
+            <div class="col-lg">
                 <label class="form-label">Layanan</label>
                 <select class="form-select form-select-sm" name="layanan" aria-label="Default select layanan" required>
                     <option value="">Layanan</option>
@@ -32,7 +32,7 @@
                 </small>
             </div>
 
-            <div class="col">
+            <div class="col-lg">
                 <label class="form-label">No Tujuan</label>
                 <input class="form-control form-control-sm" type="text" name="tujuan" placeholder="No Tujuan" aria-label="No tujuan example" required>
                 <small class="invalid-feedback">
@@ -40,7 +40,7 @@
                 </small>
             </div>
 
-            <div class="col">
+            <div class="col-lg">
                 <label class="form-label">Tanggal</label>
                 <input class="form-control form-control-sm" type="date" name="tanggal" placeholder="Date" aria-label="Date example" value="<?= date('Y-m-d') ?>" required>
                 <small class="invalid-feedback">

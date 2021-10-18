@@ -35,14 +35,14 @@
         ?>
             <div class="text-warp">
                 <div class="d-lg-none d-block fw-bold">
-                    <b>-----------------------------------</b>
+                    <b>------------------------------</b>
                 </div>
                 <h1>
                     <b>Cetak Struk Pembayaran</b>
                 </h1>
                 <div class="d-lg-none fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
                 <div class="d-lg-none d-block fw-bold">
-                    <b>-----------------------------------</b>
+                    <b>------------------------------</b>
                 </div>
             </div>
             <div class="row">
@@ -77,7 +77,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-bolder"><?= $Transaksi['reff'] ?></div>
+                        <div class="col-8 fw-bolder"><?= $Transaksi['reff'] ?></div>
                     </div>
                 </div>
             </div>
@@ -208,18 +208,18 @@
 
             <div class="col">
                 <div class="d-lg-none d-block fw-bold">
-                    <b>-----------------------------------</b>
+                    <b>------------------------------</b>
                 </div>
                 <p class="display-6 mt-3 mb-3">
                 <div>
                     <b class="d-lg-block d-none">TOKEN</b>
-                    <div>
+                    <div class="text-center fs-5">
                         <?= $vsn[0] ?>
                     </div>
                 </div>
                 </p>
                 <div class="d-lg-none d-block fw-bold">
-                    <b>-----------------------------------</b>
+                    <b>------------------------------</b>
                 </div>
             </div>
             <p>Terima Kasih</p>

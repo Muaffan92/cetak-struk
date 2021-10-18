@@ -4,4 +4,8 @@
     color: #000;
     background-color: #fff;
   }
+
+  .fs-13px {
+    font-size: 13px !important;
+  }
 }

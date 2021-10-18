@@ -213,7 +213,7 @@
                 <p class="display-6 mt-3 mb-3">
                 <div>
                     <b class="d-lg-block d-none">TOKEN</b>
-                    <div class="text-center fs-5">
+                    <div class="text-center fs-13px">
                         <?= $vsn[0] ?>
                     </div>
                 </div>

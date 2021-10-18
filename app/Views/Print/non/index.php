@@ -27,14 +27,10 @@
         foreach ($getTransaksi as $Transaksi) {
             $vsn = explode('/', $Transaksi['vsn']);
 
-            if ($Transaksi['operator'] == 'ppob') {
-                $admin = $Transaksi['adm'];
-                $nama  = $Transaksi['atas_nama'];
-                $bayar = $Transaksi['total_bayar'];
-            } else {
-                $admin = 2000;
+            if (!empty($vsn[1])) {
                 $nama  = $vsn[1];
-                $bayar = $Transaksi['price'] + 2000;
+            } else {
+                $nama  = '';
             }
         ?>
             <div class="text-warp">
@@ -44,7 +40,7 @@
                 <h1>
                     <b>Cetak Struk Pembayaran</b>
                 </h1>
-                <div class="d-lg-none fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
+                <div class="d-lg-none fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
                 <div class="d-lg-none d-block fw-bold">
                     <b>-----------------------------------</b>
                 </div>
@@ -54,7 +50,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-normal"><?= $Transaksi['tgl_sukses'] ?></div>
+                        <div class="col fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
@@ -63,7 +59,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-normal">Rp.<?= number_format($admin, 2, '.', ',') ?></div>
+                        <div class="col fw-bolder">Rp.<?= number_format(2000, 2) ?></div>
                     </div>
                 </div>
             </div>
@@ -72,7 +68,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-normal"><?= $Transaksi['tujuan'] ?></div>
+                        <div class="col fw-bolder"><?= $Transaksi['tujuan'] ?></div>
                     </div>
                 </div>
                 <div class="col-lg-3"></div>
@@ -81,7 +77,7 @@
                     <div class="row">
                         <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                         <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-normal"><?= $Transaksi['reff'] ?></div>
+                        <div class="col fw-bolder"><?= $Transaksi['reff'] ?></div>
                     </div>
                 </div>
             </div>
@@ -95,7 +91,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Nama</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">
+                        <div class="col fw-bolder">
                             <?php
                             if (!empty($nama)) {
                                 echo $nama;
@@ -112,7 +108,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">PPN</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">
+                        <div class="col fw-bolder">
                             <?php
                             if (!empty($vsn[5])) {
                                 echo $vsn[5];
@@ -130,7 +126,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Tarif</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">
+                        <div class="col fw-bolder">
                             <?php
                             if (!empty($vsn[2])) {
                                 echo $vsn[2];
@@ -147,7 +143,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">PPJ</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">
+                        <div class="col fw-bolder">
                             <?php
                             if (!empty($vsn[6])) {
                                 $ppj = explode("#", $vsn[6]);
@@ -166,7 +162,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Daya</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">
+                        <div class="col fw-bolder">
                             <?php
                             if (!empty($vsn[3])) {
                                 echo $vsn[3];
@@ -183,7 +179,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">KWH</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">
+                        <div class="col fw-bolder">
                             <?php
                             if (!empty($vsn[4])) {
                                 echo $vsn[4];
@@ -201,7 +197,7 @@
                     <div class="row">
                         <div class="col-3 col-lg-4 fw-bold">Bayar</div>
                         <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-normal">Rp.<?= number_format($bayar, 2, '.', ',') ?></div>
+                        <div class="col fw-bolder">Rp.<?= number_format($Transaksi['price'] + 2000, 2) ?></div>
                     </div>
                 </div>
             </div>

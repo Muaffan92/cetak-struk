@@ -211,9 +211,9 @@
                     <b>------------------------------</b>
                 </div>
                 <p class="display-6 mt-3 mb-3">
-                <div>
-                    <b class="d-lg-block d-none">TOKEN</b>
-                    <div class="text-center fs-13px">
+                <div class="text-center">
+                    <b class="text-center">TOKEN</b>
+                    <div class="text-center fs-20px">
                         <?= $vsn[0] ?>
                     </div>
                 </div>

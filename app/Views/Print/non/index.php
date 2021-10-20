@@ -35,14 +35,14 @@
         ?>
             <div class="text-warp">
                 <div class="d-lg-none d-block fw-bold">
-                    <b>------------------------------</b>
+                    <b>-------------------------------</b>
                 </div>
                 <h1>
                     <b>Cetak Struk Pembayaran</b>
                 </h1>
                 <div class="d-lg-none fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
                 <div class="d-lg-none d-block fw-bold">
-                    <b>------------------------------</b>
+                    <b>-------------------------------</b>
                 </div>
             </div>
             <div class="row">
@@ -208,7 +208,7 @@
 
             <div class="col">
                 <div class="d-lg-none d-block fw-bold">
-                    <b>------------------------------</b>
+                    <b>-------------------------------</b>
                 </div>
                 <p class="display-6 mt-3 mb-3">
                 <div class="text-center">
@@ -219,7 +219,7 @@
                 </div>
                 </p>
                 <div class="d-lg-none d-block fw-bold">
-                    <b>------------------------------</b>
+                    <b>-------------------------------</b>
                 </div>
             </div>
             <p>Terima Kasih</p>

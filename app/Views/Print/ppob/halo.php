@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="<?= base_url('bootstrap/css/bootstrap.min.css'); ?>">
     <title>Cetak Struk</title>
 
-    <style media="print">
+    <style>
         * {
             font-size: 11px;
             font-weight: bold;

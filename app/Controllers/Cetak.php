@@ -17,6 +17,8 @@ class Cetak extends BaseController
 
     public function index()
     {
+        header("Content-Type: application/octet-stream");
+ 
         // KODE YANG SUDAH MEMILIKI STRUK
         $struk = ['bpjs', 'pln', 'speedy', 'pgn', 'tel', 'halo', 'fif'];
 

@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200&display=swap");
 
 @media print {
   * {
-    font-family: 'Anton',"Courier New", Courier, monospace;
+    font-family: "Changa", sans-serif, Courier, monospace;
     color: #000;
     background-color: #fff;
   }

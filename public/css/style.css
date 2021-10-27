@@ -6,4 +6,24 @@
     color: #000;
     background-color: #fff;
   }
+
+  @page {
+    margin: 5%;
+    width: 10mm;
+    height: 50mm;
+    page-break-after: always;
+  }
+
+  .header-info {
+    font-size: calc(1.325rem + 0.9vw) !important;
+    text-align: center;
+  }
+
+  .w-50-p {
+    width: 50% !important;
+  }
+
+  .ms-10-p {
+    margin-left: 10% !important;
+  }
 }

@@ -33,193 +33,178 @@
                 $nama  = '';
             }
         ?>
-            <div class="text-warp">
-                <div class="d-lg-none d-block fw-bold">
-                    <b>----------------------------------------------</b>
-                </div>
-                <h1>
-                    <b>Cetak Struk Pembayaran</b>
-                </h1>
-                <div class="d-lg-none fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
-                <div class="d-lg-none d-block fw-bold">
-                    <b>----------------------------------------------</b>
-                </div>
-            </div>
             <div class="row">
-                <div class="col-12 d-lg-block d-none col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
-                        <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
-                    </div>
-                </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
-                        <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-bolder">Rp.<?= number_format(2000, 2) ?></div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
-                        <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col fw-bolder"><?= $Transaksi['tujuan'] ?></div>
-                    </div>
-                </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
-                        <div class="d-none d-lg-block col-lg-1">:</div>
-                        <div class="col-8 fw-bolder"><?= $Transaksi['reff'] ?></div>
-                    </div>
+                <div class="d-lg-none d-block fw-bold col-12">
+                    <b class="fs-1">--------------------------------------</b>
                 </div>
             </div>
 
-            <div class="d-lg-none d-block fw-bold">
-                <b>================================</b>
+            <div class="row ms-10-p">
+                <div class="text-warp col-12 w-50-p">
+                    <h1 class="text-center text-lg-start">
+                        <b class="header-info">Cetak Struk Pembayaran</b>
+                    </h1>
+                    <div class="text-center d-lg-none fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
+                </div>
             </div>
 
             <div class="row">
-                <div class="col-12 col-lg-3 ">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">Nama</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($nama)) {
-                                echo $nama;
-                            } else {
-                                echo '-';
-                            }
-                            ?>
-                        </div>
-                    </div>
+                <div class="d-lg-none d-block fw-bold col-12">
+                    <b class="fs-1">--------------------------------------</b>
                 </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">PPN</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($vsn[5])) {
-                                echo $vsn[5];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-6 d-lg-flex d-none row">
+                    <div class="col-12 col-lg-4 fw-bold">Tanggal</div>
+                    <div class="d-none d-lg-block col-lg-1">:</div>
+                    <div class="col fw-bolder"><?= $Transaksi['tgl_sukses'] ?></div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-12 col-lg-4 fw-bold">Admin Bank</div>
+                    <div class="d-none d-lg-block col-lg-1">:</div>
+                    <div class="col fw-bolder">Rp.<?= number_format(2000, 2) ?></div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-12 col-lg-4 fw-bold">Tujuan</div>
+                    <div class="d-none d-lg-block col-lg-1">:</div>
+                    <div class="col fw-bolder"><?= $Transaksi['tujuan'] ?></div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
+                    <div class="d-none d-lg-block col-lg-1">:</div>
+                    <div class="col-12 col-lg fs-4 fw-bolder">
+                        <?php
+                        echo substr($Transaksi['reff'], 0, 20);
+                        ?>
+                        <br class="d-block d-lg-none">
+                        <?php
+                        echo substr($Transaksi['reff'], 19);
+                        ?>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">Tarif</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($vsn[2])) {
-                                echo $vsn[2];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">PPJ</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($vsn[6])) {
-                                $ppj = explode("#", $vsn[6]);
-                                echo $ppj[0];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
-                    </div>
+                <div class="d-lg-none d-block fw-bold col-12">
+                    <b class="fs-1">=======================</b>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">Daya</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($vsn[3])) {
-                                echo $vsn[3];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">Nama</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">
+                        <?php
+                        if (!empty($nama)) {
+                            echo $nama;
+                        } else {
+                            echo '-';
+                        }
+                        ?>
                     </div>
                 </div>
-                <div class="col-lg-3"></div>
-                <div class="col-lg-3"></div>
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">KWH</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($vsn[4])) {
-                                echo $vsn[4];
-                            } else {
-                                echo '0';
-                            }
-                            ?>
-                        </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">PPN</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">
+                        <?php
+                        if (!empty($vsn[5])) {
+                            echo $vsn[5];
+                        } else {
+                            echo '0';
+                        }
+                        ?>
                     </div>
+                </div>
+
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">Tarif</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">
+                        <?php
+                        if (!empty($vsn[2])) {
+                            echo $vsn[2];
+                        } else {
+                            echo '0';
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">PPJ</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">
+                        <?php
+                        if (!empty($vsn[6])) {
+                            $ppj = explode("#", $vsn[6]);
+                            echo $ppj[0];
+                        } else {
+                            echo '0';
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">Daya</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">
+                        <?php
+                        if (!empty($vsn[3])) {
+                            echo $vsn[3];
+                        } else {
+                            echo '0';
+                        }
+                        ?>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">KWH</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">
+                        <?php
+                        if (!empty($vsn[4])) {
+                            echo $vsn[4];
+                        } else {
+                            echo '0';
+                        }
+                        ?>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 row">
+                    <div class="col-3 col-lg-4 fw-bold">Bayar</div>
+                    <div class="d-none d-lg-block col-1 col-lg-1">:</div>
+                    <div class="col fw-bolder">Rp.<?= number_format($Transaksi['price'] + 2000, 2) ?></div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col-12 col-lg-3">
-                    <div class="row">
-                        <div class="col-3 col-lg-4 fw-bold">Bayar</div>
-                        <div class="d-none d-block-lg col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">Rp.<?= number_format($Transaksi['price'] + 2000, 2) ?></div>
-                    </div>
+                <div class="d-lg-none d-block fw-bold col-12">
+                    <b class="fs-1">=======================</b>
                 </div>
             </div>
 
-            <div class="d-lg-none d-block fw-bold">
-                <b>================================</b>
+            <div class="row">
+                <div class="d-lg-none d-block fw-bold col-12">
+                    <b class="fs-1">--------------------------------------</b>
+                </div>
             </div>
 
-            <div class="col">
-                <div class="d-lg-none d-block fw-bold">
-                    <b>----------------------------------------------</b>
-                </div>
-                <p class="display-6 mt-3 mb-3">
-                <div class="text-center">
-                    <b class="text-center">TOKEN</b>
-                    <div class="text-center fs-1">
+            <div class="row ms-10-p">
+                <div class="col-12 col-lg-12 text-center w-50-p">
+                    <b class="fs-1">TOKEN</b>
+                    <div class="fs-1">
                         <?= $vsn[0] ?>
                     </div>
                 </div>
-                </p>
-                <div class="d-lg-none d-block fw-bold">
-                    <b>----------------------------------------------</b>
+            </div>
+
+            <div class="row">
+                <div class="d-lg-none d-block fw-bold col-12">
+                    <b class="fs-1">--------------------------------------</b>
                 </div>
             </div>
             <p>Terima Kasih</p>

@@ -54,7 +54,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-4 fw-bold">Serial Number</div>
                             <div class="d-none d-lg-block col-lg-1">:</div>
-                            <div class="col-8 fw-bolder"><?= $Transaksi['reff'] ?></div>
+                            <div class="col-12 col-lg fw-bolder"><?= $Transaksi['reff'] ?></div>
                         </div>
                     </div>
                     <div class="col-lg-3"></div>

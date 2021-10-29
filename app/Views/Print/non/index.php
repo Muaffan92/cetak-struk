@@ -197,7 +197,7 @@
                 <div class="col-12 col-lg-12 text-center w-50-p">
                     <b class="fs-1">TOKEN</b>
                     <div class="fs-1">
-                        <?= $vsn[0] ?>
+                        <textarea cols="10" rows="3" class="border boder-0 border-light text-center h-100" readonly><?= $vsn[0] ?></textarea>
                     </div>
                 </div>
             </div>

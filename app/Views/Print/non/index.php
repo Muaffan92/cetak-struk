@@ -26,12 +26,6 @@
         <?php
         foreach ($getTransaksi as $Transaksi) {
             $vsn = explode('/', $Transaksi['vsn']);
-
-            if (!empty($vsn[1])) {
-                $nama  = $vsn[1];
-            } else {
-                $nama  = '';
-            }
         ?>
             <div class="row">
                 <div class="d-lg-none d-block fw-bold col-12">
@@ -97,8 +91,8 @@
                     <div class="d-none d-lg-block col-1 col-lg-1">:</div>
                     <div class="col fw-bolder">
                         <?php
-                        if (!empty($nama)) {
-                            echo $nama;
+                        if (!empty($vsn[1])) {
+                            echo $vsn[1];
                         } else {
                             echo '-';
                         }
@@ -110,8 +104,8 @@
                     <div class="d-none d-lg-block col-1 col-lg-1">:</div>
                     <div class="col fw-bolder">
                         <?php
-                        if (!empty($vsn[5])) {
-                            echo $vsn[5];
+                        if (!empty($Transaksi['ppn'])) {
+                            echo $Transaksi['ppn'];
                         } else {
                             echo '0';
                         }
@@ -124,8 +118,8 @@
                     <div class="d-none d-lg-block col-1 col-lg-1">:</div>
                     <div class="col fw-bolder">
                         <?php
-                        if (!empty($vsn[2])) {
-                            echo $vsn[2];
+                        if (!empty($Transaksi['trf'])) {
+                            echo $Transaksi['trf'];
                         } else {
                             echo '0';
                         }
@@ -137,9 +131,8 @@
                     <div class="d-none d-lg-block col-1 col-lg-1">:</div>
                     <div class="col fw-bolder">
                         <?php
-                        if (!empty($vsn[6])) {
-                            $ppj = explode("#", $vsn[6]);
-                            echo $ppj[0];
+                        if (!empty($Transaksi['ppj'])) {
+                            echo $Transaksi['ppj'];
                         } else {
                             echo '0';
                         }
@@ -165,8 +158,8 @@
                     <div class="d-none d-lg-block col-1 col-lg-1">:</div>
                     <div class="col fw-bolder">
                         <?php
-                        if (!empty($vsn[4])) {
-                            echo $vsn[4];
+                        if (!empty($Transaksi['kwh'])) {
+                            echo $Transaksi['kwh'];
                         } else {
                             echo '0';
                         }
@@ -197,7 +190,7 @@
                 <div class="col-12 col-lg-12 text-center w-50-p">
                     <b class="fs-1">TOKEN</b>
                     <div class="fs-1">
-                        <textarea cols="10" rows="3" class="border boder-0 border-light text-center h-100" readonly><?= $vsn[0] ?></textarea>
+                        <textarea cols="10" rows="3" class="border boder-0 border-light text-center" readonly><?= $vsn[0] ?></textarea>
                     </div>
                 </div>
             </div>

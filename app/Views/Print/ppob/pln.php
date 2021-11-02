@@ -83,7 +83,7 @@
                             if (!empty($Transaksi['ppn'])) {
                                 echo $Transaksi['ppn'];
                             } else {
-                                echo '-';
+                                echo '0';
                             }
                             ?>
                         </div>
@@ -158,7 +158,7 @@
                             if (!empty($Transaksi['kwh'])) {
                                 echo $Transaksi['kwh'];
                             } else {
-                                echo '-';
+                                echo '0';
                             }
                             ?>
                         </div>
@@ -191,7 +191,7 @@
                         <b>================================</b>
                     </div>
                 </div>
-                <p>Terima Kasih</p>
+                <p style="page-break-after:always;">Terima Kasih</p>
         <?php
             }
         }

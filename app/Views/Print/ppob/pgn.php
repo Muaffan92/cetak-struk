@@ -149,7 +149,7 @@
                 <div class="d-lg-none d-block fw-bold">
                     <b>================================</b>
                 </div>
-                <p>Terima Kasih</p>
+                <p style="page-break-after:always;">Terima Kasih</p>
         <?php
             }
         }

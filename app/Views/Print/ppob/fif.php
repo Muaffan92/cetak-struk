@@ -113,7 +113,7 @@
                         <b>================================</b>
                     </div>
                 </div>
-                <p>Terima Kasih</p>
+                <p style="page-break-after:always;">Terima Kasih</p>
         <?php
             }
         }

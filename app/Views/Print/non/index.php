@@ -190,7 +190,7 @@
                 <div class="col-12 col-lg-12 text-center w-50-p">
                     <b class="fs-1">TOKEN</b>
                     <div class="fs-1">
-                        <textarea cols="10" rows="3" class="border boder-0 border-light text-center" readonly><?= $vsn[0] ?></textarea>
+                        <textarea cols="10" rows="3" class="border boder-0 border-light text-center m-0" readonly><?= $vsn[0] ?></textarea>
                     </div>
                 </div>
             </div>
@@ -200,7 +200,7 @@
                     <b class="fs-1">--------------------------------------</b>
                 </div>
             </div>
-            <p>Terima Kasih</p>
+            <p style="page-break-after:always;">Terima Kasih</p>
         <?php
         }
         ?>

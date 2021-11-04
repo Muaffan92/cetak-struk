@@ -66,9 +66,7 @@
                         <div class="col fw-bolder">
                             <?php
                             if (!empty($Transaksi['atas_nama'])) {
-                                $atas_nama = explode(',', $Transaksi['atas_nama']);
-
-                                echo $atas_nama[0];
+                                echo $Transaksi['atas_nama'];
                             } else {
                                 echo '-';
                             }
@@ -94,15 +92,7 @@
                     <div class="col-12 row">
                         <div class="col-3 col-lg-2 fw-bold">Bulan</div>
                         <div class="d-none d-lg-block col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($Transaksi['bulan_ppob'])) {
-                                echo 'Bln:' . $Transaksi['bulan_ppob'];
-                            } else {
-                                echo '-';
-                            }
-                            ?>
-                        </div>
+                        <div class="col fw-bolder"><?= $Transaksi['bulan_ppob']; ?></div>
                     </div>
                 </div>
 

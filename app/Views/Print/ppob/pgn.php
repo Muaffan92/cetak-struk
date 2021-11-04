@@ -78,17 +78,7 @@
                     <div class="col-12 col-lg-6 row">
                         <div class="col-3 col-lg-4 fw-bold">Bulan</div>
                         <div class="d-none d-lg-block col-1 col-lg-1">:</div>
-                        <div class="col fw-bolder">
-                            <?php
-                            if (!empty($Transaksi['bulan_ppob'])) {
-                                $bln_ppob = explode(',Per:', $Transaksi['bulan_ppob']);
-
-                                echo 'Bln:' . $bln_ppob[1];
-                            } else {
-                                echo '-';
-                            }
-                            ?>
-                        </div>
+                        <div class="col fw-bolder"><?= $Transaksi['bulan_ppob']; ?></div>
                     </div>
                 </div>
 

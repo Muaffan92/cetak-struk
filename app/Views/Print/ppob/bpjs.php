@@ -87,9 +87,7 @@
                         <div class="col fw-bolder">
                             <?php
                             if (!empty($vsn[4])) {
-                                $member = explode(':', $vsn[4]);
-
-                                echo $member[1];
+                                echo $vsn[4];
                             } else {
                                 echo '-';
                             }
